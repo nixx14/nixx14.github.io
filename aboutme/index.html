@@ -10,7 +10,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
         }
@@ -34,10 +34,18 @@
         button:hover {
             background-color: #0056b3;
         }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="../images/profile.jpg" alt="My Profile Picture" class="profile-pic">
         <h1>About Me</h1>
         <p>Hello! I'm [Your Name]. This is my about me page.</p>
         <p>Here you can add more information about yourself, your interests, your projects, or anything else you'd like to share.</p>
