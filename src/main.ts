@@ -13,7 +13,7 @@ function updateGreeting(): void {
 }
 
 function navigateToAboutMe(): void {
-    window.location.href = 'https://nixx14.github.io/aboutme';
+    window.location.href = 'aboutme/';
 }
 
 // Add event listeners when the DOM is fully loaded

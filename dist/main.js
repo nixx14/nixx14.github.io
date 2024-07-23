@@ -11,7 +11,7 @@ function updateGreeting() {
     }
 }
 function navigateToAboutMe() {
-    window.location.href = 'https://nixx14.github.io/aboutme';
+    window.location.href = 'aboutme/';
 }
 // Add event listeners when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
