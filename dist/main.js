@@ -10,11 +10,18 @@ function updateGreeting() {
         greetingDiv.textContent = greet(name_1);
     }
 }
-// Add event listener when the DOM is fully loaded
+function navigateToAboutMe() {
+    window.location.href = 'https://nixx14.github.io/aboutme';
+}
+// Add event listeners when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-    var button = document.getElementById('greetButton');
-    if (button) {
-        button.addEventListener('click', updateGreeting);
+    var greetButton = document.getElementById('greetButton');
+    var aboutMeButton = document.getElementById('aboutMeButton');
+    if (greetButton) {
+        greetButton.addEventListener('click', updateGreeting);
+    }
+    if (aboutMeButton) {
+        aboutMeButton.addEventListener('click', navigateToAboutMe);
     }
     // Initial greeting
     updateGreeting();

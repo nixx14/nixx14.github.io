@@ -12,12 +12,23 @@ function updateGreeting(): void {
     }
 }
 
-// Add event listener when the DOM is fully loaded
+function navigateToAboutMe(): void {
+    window.location.href = 'https://nixx14.github.io/aboutme';
+}
+
+// Add event listeners when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('greetButton');
-    if (button) {
-        button.addEventListener('click', updateGreeting);
+    const greetButton = document.getElementById('greetButton');
+    const aboutMeButton = document.getElementById('aboutMeButton');
+    
+    if (greetButton) {
+        greetButton.addEventListener('click', updateGreeting);
     }
+    
+    if (aboutMeButton) {
+        aboutMeButton.addEventListener('click', navigateToAboutMe);
+    }
+    
     // Initial greeting
     updateGreeting();
 });
