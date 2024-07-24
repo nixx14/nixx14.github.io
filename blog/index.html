@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Your Name - Blog</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"
         rel="stylesheet">
@@ -13,7 +13,7 @@
             margin: 0;
             font-family: 'Lato', sans-serif;
             color: #2a2a2a;
-            background-image: url('images/wave.svg');
+            background-image: url('../images/wave.svg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -89,27 +89,32 @@
             text-decoration: underline;
         }
 
-        .profile-pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 20px auto;
-            display: block;
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
         }
 
-        button {
-            margin: 10px 5px;
-            padding: 8px 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        .blog-tile {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        button:hover {
-            background-color: #0056b3;
+        .blog-tile:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-tile h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .blog-tile p {
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -118,29 +123,32 @@
     <nav class="nav-bar">
         <div class="name">Your Name</div>
         <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#portfolio">Portfolio</a>
+            <a href="index.html">Writings</a>
         </div>
     </nav>
-    <div id="home" class="content-section">
-        <h1>Working through the night to bring wise ideas to light.</h1>
-        <p>Hello! I'm [Your Name], and I've been designing usable and delightful digital experiences—as well as writing
-            and speaking about design—for almost 20 years.</p>
-        <a href="#portfolio">Peruse my portfolio →</a>
-    </div>
-    <div id="about" class="content-section">
-        <img src="images/profile.jpg" alt="My Profile Picture" class="profile-pic">
-        <h2>About Me</h2>
-        <p>Hello! I'm [Your Name]. This is my about me section.</p>
-        <p>Here you can add more information about yourself, your interests, your projects, or anything else you'd like
-            to share.</p>
-    </div>
-    <div id="portfolio" class="content-section">
-        <h2>Portfolio</h2>
-        <p>This is where you can showcase your work and projects.</p>
-        <!-- Add your portfolio items here -->
+    <div class="content-section">
+        <h1>My Writings</h1>
+        <p>Welcome to my blog! Here you'll find my thoughts, ideas, and experiences on various topics.</p>
+        <div class="blog-grid">
+            <div class="blog-tile">
+                <h3>The Future of Web Design</h3>
+                <p>Exploring upcoming trends and technologies in web design...</p>
+                <a href="sample-blog.html">Read more →</a>
+            </div>
+            <div class="blog-tile">
+                <h3>Mastering CSS Grid</h3>
+                <p>A comprehensive guide to using CSS Grid for modern layouts...</p>
+                <a href="#">Read more →</a>
+            </div>
+            <div class="blog-tile">
+                <h3>The Importance of User Research</h3>
+                <p>Why user research is crucial for creating successful products...</p>
+                <a href="#">Read more →</a>
+            </div>
+        </div>
     </div>
 </body>
 
