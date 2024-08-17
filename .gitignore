@@ -1,0 +1,5 @@
+*/node_modules
+node_modules/
+*.log
+
+my-personal-website/node_modules/
