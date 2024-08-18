@@ -1,18 +1,26 @@
 import "./App.css";
+import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+// import About from './components/About';
+// import Writings from './components/Writings';
+// import Prototypes from './components/Prototypes';
 
 function App() {
   const title = "Welcome to the new blog";
   return (
-    <div className="App">
-      <Navbar />
-      <div className="content">
-        <h1>{title}</h1>
-        <p>Posted by Mario on 10th August 2021</p>
-        <a href="/">Read more...</a>
-        <button className="button is-primary mt-4">Bulma Button</button>
+    <BrowserRouter>
+      <div className="App">
+        <Home />
+        <Routes>
+          {/* <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/writings" element={<Writings />} />
+          <Route path="/prototypes" element={<Prototypes />} /> */}
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
