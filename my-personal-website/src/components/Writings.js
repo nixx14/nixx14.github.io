@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Writings = () => {
     const [activeTab, setActiveTab] = useState('Blogs');
@@ -13,7 +13,8 @@ const Writings = () => {
             excerpt: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi ipsum soluta accusamus asperiores, sunt velit, eos minus animi, cumque aperiam incidunt? Accusamus beatae itaque dolores numquam magnam nostrum autem.',
             date: '12th June, 2024',
             tags: ['One', 'Two', 'Three', 'Four'],
-            link: '/sample-blog'
+            slug: 'bigquery-rows-go',
+            id: 1,
         },
         // Add more blog posts here...
     ];
@@ -59,7 +60,7 @@ const Writings = () => {
                     </div>
                     {blogPosts.map((post, index) => (
                         <div key={index} className="px-6 py-5">
-                            <Link to={post.link} className="title is-3 has-text-weight-medium">{post.title}</Link>
+                            <Link to={`/writings/blogs/${post.slug}`} className="title is-3 has-text-weight-medium">{post.title}</Link>
                             <h2 className="subtitle is-6">{post.excerpt}</h2>
                             <span className="is-size-6 pr-5">{post.date}</span>
                             {post.tags.map((tag, tagIndex) => (
@@ -69,6 +70,7 @@ const Writings = () => {
                     ))}
                 </nav>
             </div>
+            <Outlet />
         </section>
     );
 };

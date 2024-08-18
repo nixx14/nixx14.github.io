@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/Homepage";
 import WritingsPage from "./pages/Writings";
 import PrototypesPage from "./pages/Prototypes";
+import BlogDetails from "./components/BlogDetails";
 // import About from './components/About';
 // import Writings from './components/Writings';
 // import Prototypes from './components/Prototypes';
@@ -21,7 +22,9 @@ function App() {
               <Route exact path="/" element={<HomePage />}></Route>
               <Route path="/about" element={<HomePage />}></Route>
               <Route path="/writings" element={<WritingsPage />}></Route>
+                {/* <Route path="/blogs/:slug" element={<BlogDetails />} /> */}
               <Route path="/prototypes" element={<PrototypesPage />}></Route>
+              <Route path="/writings/blogs/:slug" element={<BlogDetails />}></Route>
             </Routes>
           </div>
           <Footer />
