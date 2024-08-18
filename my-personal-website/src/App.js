@@ -1,24 +1,31 @@
 import "./App.css";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
+import HomePage from "./pages/Homepage";
+import WritingsPage from "./pages/Writings";
+import PrototypesPage from "./pages/Prototypes";
 // import About from './components/About';
 // import Writings from './components/Writings';
 // import Prototypes from './components/Prototypes';
 
 function App() {
-  const title = "Welcome to the new blog";
   return (
     <BrowserRouter>
       <div className="App">
-        <Home />
-        <Routes>
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/writings" element={<Writings />} />
-          <Route path="/prototypes" element={<Prototypes />} /> */}
-        </Routes>
+        <div className="container">
+          <Navbar />
+          <div className="content">
+            <Routes>
+              <Route exact path="/" element={<HomePage />}></Route>
+              <Route path="/about" element={<HomePage />}></Route>
+              <Route path="/writings" element={<WritingsPage />}></Route>
+              <Route path="/prototypes" element={<PrototypesPage />}></Route>
+            </Routes>
+          </div>
+          <Footer />
+        </div>
       </div>
     </BrowserRouter>
   );
